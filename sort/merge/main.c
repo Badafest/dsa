@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "../utils/main.c"
 
 void merge(int *nums, int size, int mergeIndex);
-void copy(int size, int *nums, int *copy);
-void printNumbers(int n, int *nums);
 
-int main()
+int main(void)
 {
     int numbers[] = {4, 0, 7, 5, 8, 22, 8, 9, 3, 1, 2, 6};
     const int N = sizeof numbers / sizeof numbers[0];
@@ -64,21 +63,4 @@ void merge(int *nums, int size, int mergeIndex)
     }
 
     free(original);
-}
-
-void copy(int size, int *nums, int *copy)
-{
-    for (int i = 0; i < size; i++)
-    {
-        copy[i] = nums[i];
-    }
-}
-
-void printNumbers(int n, int *nums)
-{
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", nums[i]);
-    }
-    printf("\n");
 }

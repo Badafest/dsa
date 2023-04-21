@@ -1,9 +1,7 @@
 #include <stdio.h>
+#include "../utils/main.c"
 
-void swap(int *a, int *b);
-void printNumbers(int n, int *nums);
-
-int main()
+int main(void)
 {
     int numbers[] = {4, 0, 7, 5, 8, 22, 8, 9, 3, 1, 2, 6};
     const int N = sizeof numbers / sizeof numbers[0];
@@ -22,20 +20,4 @@ int main()
     } while (noOfSwaps);
     printNumbers(N, numbers);
     return 0;
-}
-
-void swap(int *a, int *b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void printNumbers(int n, int *nums)
-{
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", nums[i]);
-    }
-    printf("\n");
 }

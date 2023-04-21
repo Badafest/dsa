@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 const int numbers[] = {1, 3, 5, 7, 9, 12, 15};
 int binarySearch(int search, int from, int to);
